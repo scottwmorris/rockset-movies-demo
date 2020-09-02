@@ -38,30 +38,30 @@ function App() {
     )
     .then(response => setResults(response.results))
     .catch(error => console.error(error));;
-    axios.post(
-      "https://api.rs2.usw2.rockset.com/v1/orgs/self/ws/commons/lambdas/fetchMovies/tags/dev",
-      {
-        "parameters": [
-          {
-            "name": "genre",
-            "type": "string",
-            "value": genre,
-          },
-          {
-            "name": "userId",
-            "type": "string",
-            "value": userId,
-          }
-        ]
-      },  
-      {
-        "headers": {
-          "Authorization": `ApiKey ${ROCKSET_APIKEY}`
-        }
-      }
-    )
-    .then(response => setResults(response.data.results))
-    .catch(error => console.error(error));
+    // axios.post(
+    //   "https://api.rs2.usw2.rockset.com/v1/orgs/self/ws/commons/lambdas/fetchMovies/tags/dev",
+    //   {
+    //     "parameters": [
+    //       {
+    //         "name": "genre",
+    //         "type": "string",
+    //         "value": genre,
+    //       },
+    //       {
+    //         "name": "userId",
+    //         "type": "string",
+    //         "value": userId,
+    //       }
+    //     ]
+    //   },  
+    //   {
+    //     "headers": {
+    //       "Authorization": `ApiKey ${ROCKSET_APIKEY}`
+    //     }
+    //   }
+    // )
+    // .then(response => setResults(response.data.results))
+    // .catch(error => console.error(error));
   }
   
   return (
