@@ -5,11 +5,6 @@ import rocksetConfigure from "@rockset/client";
 
 const ROCKSET_APIKEY = '<insert key>';
 const rockset = rocksetConfigure(ROCKSET_APIKEY, "https://api.rs2.usw2.rockset.com");
- 
-
-
-
-
 
 function App() {
   const [userId, setUserId] = React.useState('');
